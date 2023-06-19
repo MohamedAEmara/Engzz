@@ -7,10 +7,14 @@ import inboxImgg from "./images/inbox.png";
 import weekImgg from "./images/week.png";
 import todayImgg from "./images/calendar.png";
 
-import {tasks} from "./tasks.js";
-import {task, createTask} from "./createTask";
-import {showTasks} from './showTasks';
-
+import {tasks} from "./js/tasks.js";
+import {task, createTask} from "./js/createTask";
+import {showTasks} from './js/showTasks';
+import { projects } from './js/projects';
+import { Project } from "./js/createProject";
+import { showProjects } from './js/showProjects';
+import { projectClickListener } from './js/projectClickListener';
+import { display } from './js/displayProject';
 
 // const content = document.getElementById('heaeder');
 const headerTxt = document.getElementById('headerText');
@@ -22,6 +26,39 @@ const todayImg = document.getElementById('todayIcon');
 const weekImg = document.getElementById('weekIcon');
 
 const content = document.getElementById('content');
+
+const addProjectBtn = document.getElementById('addProjectBtn');
+const addProjectInput = document.getElementById('addProjectInput');
+
+addProjectBtn.addEventListener('click', () => {
+    console.log('btn clicked');
+    console.log("textContent = " + addProjectInput.value);
+    if(addProjectInput.value != "") {
+        const tmpProject = new Project(addProjectInput.value);
+        addProjectInput.value = "";
+        console.log("done successfully!");
+        showProjects();
+        // projectClickListener();
+
+        const projectNodes = document.querySelectorAll('.project');
+        console.log("# of .project elements = " + projectNodes.length);
+        projectNodes.forEach(element => {
+            console.log(element);
+            element.addEventListener('click', function() {
+                console.log(this);
+                display(element);
+            })
+        });
+
+        // for(let i of projectNodes) {
+        //     i.addEventListener('click', function() {
+        //         console.log(this);
+        //     });
+        // }
+    }
+    
+});
+
 
 
 headerImg.src = headerImgg;
@@ -36,3 +73,12 @@ const b = new task("dfffff", 5555, 666);
 console.log(tasks);
 
 showTasks();
+
+
+
+
+const c = new Project("Courses");
+const d = new Project("Home");
+
+showProjects();
+
