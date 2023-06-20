@@ -16,6 +16,7 @@ import { showProjects } from './js/showProjects';
 import { projectClickListener } from './js/projectClickListener';
 import { display } from './js/displayProject';
 import { handleClick, handleFormBtnClick } from './js/handleAddListBtn';
+import { handleAllTasks} from './js/handleAllTasks';
 // import { handleAddTaskBtn } from './js/handleAddTaskBtn';
 
 // const content = document.getElementById('heaeder');
@@ -26,7 +27,7 @@ const footerImg = document.getElementById('footerIcon');
 const inboxImg = document.getElementById('inboxIcon');
 const todayImg = document.getElementById('todayIcon');
 const weekImg = document.getElementById('weekIcon');
-
+const inbox = document.getElementById('inbox');
 const content = document.getElementById('content');
 
 const addProjectBtn = document.getElementById('addProjectBtn');
@@ -36,7 +37,7 @@ const addProjectInput = document.getElementById('addProjectInput');
 
 handleFormBtnClick();
 
-
+handleAllTasks();
 
 headerImg.src = headerImgg;
 footerImg.src = githubImgg;
