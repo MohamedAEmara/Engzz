@@ -18,6 +18,8 @@ import { display } from './js/displayProject';
 import { handleClick, handleFormBtnClick } from './js/handleAddListBtn';
 import { handleAllTasks} from './js/handleAllTasks';
 // import { handleAddTaskBtn } from './js/handleAddTaskBtn';
+import { handleTodayTasks } from './js/handleTodayTasks';
+
 
 // const content = document.getElementById('heaeder');
 const headerTxt = document.getElementById('headerText');
@@ -29,10 +31,40 @@ const todayImg = document.getElementById('todayIcon');
 const weekImg = document.getElementById('weekIcon');
 const inbox = document.getElementById('inbox');
 const content = document.getElementById('content');
-
+const popup = document.getElementById('popup');
+const all = document.getElementById('all');
 const addProjectBtn = document.getElementById('addProjectBtn');
 const addProjectInput = document.getElementById('addProjectInput');
 
+
+const submit = document.getElementById('submitPopup');
+
+submit.addEventListener('click', (event) => {
+    // Prevent default form submission behavior
+    event.preventDefault();
+    // Retrieve input values from form fields
+    const taskName = document.getElementById('taskName');
+    let name = taskName.value;
+    const dueDate = document.getElementById('dueDate');
+    let date = dueDate.value;
+    const priorityInput = document.getElementById('options');
+    let priority = priorityInput.value;
+    
+    // now we want to add the related project of this task??
+    // It's known from the first line in the content section
+    
+    let project = content.firstChild.textContent;
+    
+    const tmp = new task(name, date, priority, project);
+    
+    console.log(tmp);
+    // if form input are all valid and not missing
+    // So, We'll close it
+    // 1- Remove active class from popup
+    // 2- Remove disable class from all
+    popup.classList.remove('active');
+    all.classList.remove('disable');
+});
 
 
 handleFormBtnClick();
@@ -53,7 +85,7 @@ console.log(tasks);
 showTasks();
 
 
-
+handleTodayTasks();
 
 const c = new Project("Courses");
 const d = new Project("Home");

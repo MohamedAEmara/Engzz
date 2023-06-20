@@ -18,13 +18,13 @@
                         <img id="inboxIcon">
                         <div id="text">All Tasks</div>
                     </div>
-                    <div class="today">
+                    <div id="today">
                         <img id="todayIcon">
-                        <div id="text">Today</div>
+                        <div id="todayText">Today</div>
                     </div>
-                    <div class="week">
+                    <div id="week">
                         <img id="weekIcon">
-                        <div id="text">This Week</div>
+                        <div id="WeekText">This Week</div>
                     </div>
                 </div>
                 
@@ -51,21 +51,21 @@
                 <button class="cancelTaskFrom">x</button>
             <div class="taskName">
                 <label for="taskName"></label>
-                <input type="text">
+                <input type="text" id="taskName">
             </div>
             <div class="dueDate">
                 <label for="dueDate"></label>
-                <input type="date">
+                <input type="date" id="dueDate" required>
             </div>
-            <div class="priority">
+            <div id="priority">
                 <label for="priority"></label>
                 <select name="priority" id="options">
-                    <option value="option1">High Priority</option>
-                    <option value="option1">Normal</option>
-                    <option value="option1">Low Priority</option>
+                    <option value="op1">High Priority</option>
+                    <option value="op2">Normal</option>
+                    <option value="op3">Low Priority</option>
                 </select>
             </div>
-            <button>Add</button>
+            <button id="submitPopup">Add</button>
             <!-- </fieldset> -->
             
             
