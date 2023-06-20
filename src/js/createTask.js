@@ -10,6 +10,7 @@ class task {
         this.date = date;
         this.priority = priority;
         this.list = list;
+        this.complete = false;
         this.createTask(this);
     }
     createTask() {

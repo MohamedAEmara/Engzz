@@ -15,6 +15,8 @@ import { Project } from "./js/createProject";
 import { showProjects } from './js/showProjects';
 import { projectClickListener } from './js/projectClickListener';
 import { display } from './js/displayProject';
+import { handleClick, handleFormBtnClick } from './js/handleAddListBtn';
+// import { handleAddTaskBtn } from './js/handleAddTaskBtn';
 
 // const content = document.getElementById('heaeder');
 const headerTxt = document.getElementById('headerText');
@@ -30,34 +32,9 @@ const content = document.getElementById('content');
 const addProjectBtn = document.getElementById('addProjectBtn');
 const addProjectInput = document.getElementById('addProjectInput');
 
-addProjectBtn.addEventListener('click', () => {
-    console.log('btn clicked');
-    console.log("textContent = " + addProjectInput.value);
-    if(addProjectInput.value != "") {
-        const tmpProject = new Project(addProjectInput.value);
-        addProjectInput.value = "";
-        console.log("done successfully!");
-        showProjects();
-        // projectClickListener();
 
-        const projectNodes = document.querySelectorAll('.project');
-        console.log("# of .project elements = " + projectNodes.length);
-        projectNodes.forEach(element => {
-            console.log(element);
-            element.addEventListener('click', function() {
-                console.log(this);
-                display(element);
-            })
-        });
 
-        // for(let i of projectNodes) {
-        //     i.addEventListener('click', function() {
-        //         console.log(this);
-        //     });
-        // }
-    }
-    
-});
+handleFormBtnClick();
 
 
 
