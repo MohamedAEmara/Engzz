@@ -1,11 +1,11 @@
 console.log("beginning");
 
 import './styles.css';
-import headerImgg from "./images/to-do-list.png";
+import headerImgg from "./images/logo.svg";
 import githubImgg from "./images/github.png";
-import inboxImgg from "./images/inbox.png";
-import weekImgg from "./images/week.png";
-import todayImgg from "./images/calendar.png";
+import inboxImgg from "./images/omar.svg";
+import weekImgg from "./images/week.svg";
+import todayImgg from "./images/today.svg";
 
 import {tasks} from "./js/tasks.js";
 import {task, createTask} from "./js/createTask";
