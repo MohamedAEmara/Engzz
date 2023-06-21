@@ -12,7 +12,13 @@ function handleCancelTask() {
 
         popup.classList.remove('active');
         all.classList.remove('disable');
-        
+        // taskName dueDate options
+        const taskName = document.getElementById('taskName');
+        const dueDate = document.getElementById('dueDate');
+        const options = document.getElementById('options');
+        taskName.value = "";
+        dueDate.value = "";
+        options.value = "";
 });
 }
 
