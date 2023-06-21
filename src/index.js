@@ -23,6 +23,7 @@ import { handleSubmitTask } from './js/handleSubmitTask';
 import { handleCancelTask } from './js/handleCancelTask';
 import { showWeekTasks } from './js/showWeekTasks';
 
+
 // const content = document.getElementById('heaeder');
 const headerTxt = document.getElementById('headerText');
 const headerImg = document.getElementById('headerIcon');
@@ -52,7 +53,7 @@ inboxImg.src = inboxImgg;
 todayImg.src = todayImgg;
 weekImg.src = weekImgg;
 
-// const a = new task("sldfjkf", '2023-04-10', 33);
+const a = new task("Study lecture 5 in Database", '2023-04-10', 'highPriority');
 // const b = new task("dfffff", '2020-10-12', 666);
 
 console.log(tasks);
