@@ -120,10 +120,7 @@ button {
     flex-direction: column;
 }
 
-#content > * {
-    display: flex;
-    justify-content: space-around;
-}
+
   /* Media query for responsive adjustments */
   /* @media screen and (max-width: 768px) {
     .grid-container {
@@ -335,4 +332,55 @@ font-size: 46px;
 
     width: 37px;
     margin-right: 10px;
+}
+
+
+.check {
+    width: 20px;
+    height: 20px;
+    border: 2px solid white;
+    border-radius: 20px;
+}
+
+.task {
+    display: flex;
+    /* justify-content: flex-start; */
+    justify-content: space-between;
+    gap: 60px;
+}
+.left {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.right {
+    display: flex;
+}
+
+
+/* #content > * {
+    display: flex;
+    justify-content: space-around;
+} */
+
+#op1 {
+    border: 2px solid red;
+} 
+#op2 {
+    border: 2px solid yellow;
+}
+#op3 {
+    border: 2px solid greenyellow;
+}
+
+
+#op1:hover::before {
+    content: " 🗸";
+    font-size: 20px;
+    /* width: 100px; */
+    /* height: 100px; */
+    /* background-color: cyan; */
+    color: white;
+    text-align: center;
 }

@@ -52,7 +52,7 @@ inboxImg.src = inboxImgg;
 todayImg.src = todayImgg;
 weekImg.src = weekImgg;
 
-// const a = new task("sldfjkf", '2023-04-10', 33);
+const a = new task("Study lecture 7 in Database", '2023-04-10', 'op1');
 // const b = new task("dfffff", '2020-10-12', 666);
 
 console.log(tasks);
