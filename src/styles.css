@@ -174,6 +174,9 @@ button {
     font-size: 50px;
     text-align: center;
     font-weight: 900;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 #addTask:hover {
@@ -286,18 +289,7 @@ opacity: 1;
     filter: invert(1);
 }
 
-#lists > * {
-    /* background-color: red; */
-    background: #F0BD8B 0% 0% no-repeat padding-box;
-    margin-left: 15%;
-    margin-right: 15%;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    font-size: 20px;
-    padding-top: 10px;
-    padding-bottom: 10px;
 
-}
 
 #inboxIcon {
     /* Layout Properties */
@@ -413,15 +405,25 @@ font-size: 46px;
     border: 2px solid greenyellow;
 }
 
+/* 
+#op1:hover, #op2:hover, #op3:hover {
+    background-color: white;
+    
+} */
 
-#op1:hover::before {
-    content: "x";
-    font-size: 20px;
-    /* width: 100px; */
-    /* height: 100px; */
-    /* background-color: cyan; */
-    color: white;
-    text-align: center;
+#op1:hover {
+    background-color: red;
+    cursor: pointer;
+}
+
+#op2:hover {
+    background-color: yellow;
+    cursor: pointer;
+}
+
+#op3:hover {
+    background-color: greenyellow;
+    cursor: pointer;
 }
 
 
@@ -469,4 +471,105 @@ font-size: 46px;
     display: flex;
     flex-direction: column;
     gap: 10px;
+}
+
+
+#today:hover, #week:hover, #inbox:hover, .project:hover{
+    cursor: pointer;
+}
+
+/* #today:focus, #week:hover, #inbox:hover {
+    background-color: #132C2E;
+} */
+
+
+
+.project:hover {
+    color: #F9F8F6;
+    opacity: 1;
+    background: #AD876F 0% 0% no-repeat padding-box;
+    /* background-color: #AD876F; */
+    /* border-radius: 8px; */
+/* border-radius: 8px; */
+
+/* Layout Properties */
+top: 176px;
+left: 38px;
+/* width: 230px; */
+/* height: 45px; */
+/* UI Properties */
+background: #AD876F 0% 0% no-repeat padding-box;
+/* border-radius: 8px; */
+opacity: 1;
+}
+
+
+
+/* #lists > * {
+    
+    background: #F0BD8B 0% 0% no-repeat padding-box;
+    margin-left: 15%;
+    margin-right: 15%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+} */
+
+.project {
+    padding: 10px;
+    margin: 5px;
+    text-align: center;
+    font-size: 25px;
+    border-radius: 20px;
+    border: 2px solid brown;
+}
+
+#addProjectInput {
+    background-color: rgb(0, 0, 0, 0.5);
+    width: 90%;
+    margin-left: 3%;
+    /* align-self: center; */
+    margin-top: 15px;
+    height: 20px;
+}
+
+#addProjectBtn {
+    background: #F0BD8B 0% 0% no-repeat padding-box;
+
+    /* margin-top: min(200%, ; */
+    /* margin-bottom: 10px; */
+    /* position: absolute; */
+    /* bottom: 15px; */
+    /* right: 15px; */
+    border-radius: 15px;
+    /* width: 60px; */
+    /* height: 60px; */
+    /* color: white; */
+    font-size: 25px;
+    text-align: center;
+    /* font-weight: 900; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    width: 50%;
+    /* margin-left: 43px; */
+    margin-top: 10px;
+}
+
+#addList {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+.task {
+    /* border: 2px solid black; */
+    font-size: 20px;
+    padding-top: 5px;
+    padding-right: 5px;
 }

@@ -4,16 +4,15 @@ const { format, addDays, isThisWeek, differenceInDays, parseISO } = require('dat
 
 
 function showWeekTasks() {
-    // while(content.hasChildNodes()) {
-    //     content.removeChildNode(content.childNodes[0]);
-    // }
 
+    content.innerHTML = "";
+    while (content.firstChild) {
+        content.removeChild(content.firstChild);
+    }
 
-    // const element = document.getElementById('myElement');
-        content.innerHTML = "";
-        while (content.firstChild) {
-            content.removeChild(content.firstChild);
-        }
+    const weekTitle = document.createElement('div');
+    weekTitle.innerHTML = "This Week";
+    content.appendChild(weekTitle);
 
     tasks.forEach(task => {
         const date = task.date;
@@ -36,22 +35,68 @@ function showWeekTasks() {
         console.log();
 
         if(diff1 >= 0 && diff2 >= 0) {    // task is in <= 7 days due date
+            // const line = document.createElement('div');
+            // const name = document.createElement('div');
+            // const date = document.createElement('div');
+            // const level = document.createElement('div');
+            // const check = document.createElement('button');
+            // line.classList.add('task');
+            // name.innerHTML = task.title;
+            // date.innerHTML = task.date;
+            // level.innerHTML = task.priority;
+            // check.innerHTML = " ";
+            // line.appendChild(name);
+            // line.appendChild(date);
+            // line.appendChild(level);
+            // line.appendChild(check);
+            // content.appendChild(line);
             const line = document.createElement('div');
-            const name = document.createElement('div');
+            const check = document.createElement('div');
+            check.setAttribute('id', 'check');
+            check.classList.add('check');
             const date = document.createElement('div');
-            const level = document.createElement('div');
-            const check = document.createElement('button');
+            const name = document.createElement('div');
+            // const level = document.createElement('div');
+            
+            const left = document.createElement('div');
+            const right = document.createElement('div');
+
+
+            left.classList.add('left');
+            right.classList.add('right');
+            // left.appendChild(check);
+            // line.appendChild(title);
+
+            // const check = document.createElement('button');
             line.classList.add('task');
+
             name.innerHTML = task.title;
-            date.innerHTML = task.date;
-            level.innerHTML = task.priority;
+            // date.innerHTML = element.date;
+            let tmp = task.date;
+            let level = task.priority;
+            console.log(tmp + " = haha");
+            const dt = parseISO(tmp);
+            const formattedDate = format(dt, 'dd/MM/yyyy');
+            // check.classList.add(element.priority);
+            check.setAttribute('id', task.priority);
             check.innerHTML = " ";
-            line.appendChild(name);
-            line.appendChild(date);
-            line.appendChild(level);
-            line.appendChild(check);
+            date.innerHTML = formattedDate;
+            // line.appendChild(name);
+            // line.appendChild(date);
+            // line.appendChild(level);
+            // line.appendChild(check);
             content.appendChild(line);
-        }
+            left.appendChild(check);
+            left.appendChild(name);
+
+            right.appendChild(date);
+
+            line.appendChild(left);
+            line.appendChild(right);
+            content.append(line);
+            check.classList.add(level);
+            }
+        
     });
 }
 
