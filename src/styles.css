@@ -1,3 +1,20 @@
+@font-face {
+    font-family: "font1";
+    src: url("./fonts/font1.ttf");
+}
+@font-face {
+    font-family: "font2";
+    src: url("./fonts/font2.ttf");
+}
+@font-face {
+    font-family: "font3";
+    src: url("./fonts/font3.ttf");
+}
+@font-face {
+    font-family: "font4";
+    src: url("./fonts/font4.ttf");
+}
+
 body, html {
     padding: 0;
     margin: 0;
@@ -142,18 +159,30 @@ button {
 
 
 #addTask {
-    background-color: red;
+    /* background-color: red; */
+    background: #F0BD8B 0% 0% no-repeat padding-box;
+
     /* margin-top: min(200%, ; */
     /* margin-bottom: 10px; */
     position: absolute;
+    bottom: 15px;
+    right: 15px;
+    border-radius: 50px;
+    width: 60px;
+    height: 60px;
+    color: white;
+    font-size: 50px;
+    text-align: center;
+    font-weight: 900;
+}
+
+#addTask:hover {
     bottom: 10px;
     right: 10px;
-    border-radius: 50px;
-    width: 50px;
-    height: 50px;
-    color: white;
-    font-size: 40px;
-    text-align: center;
+    width: 70px;
+    height: 70px;
+    font-size: 60px;
+    
 }
 
 form#popup {
@@ -162,19 +191,28 @@ form#popup {
 
 #popup.active {
     position: absolute;
-    top: 30%;
-    margin-right: 15%;
-    margin-left: 15%;
-    left: 0;
+    top: 20%;
+    right: 20%;
+    left: 20%;
+    
+    /* bottom: 10%; */
+    /* margin-top: 20%; */
+    /* margin-bottom: 20%; */
+    /* margin-right: 25%; */
+    /* margin-left: 25%; */
+    /* left: 0;
     right: 0;
-    bottom: 0;
-    background-color: black;
+    bottom: 0; */
+    background-color: rgba(0, 0, 0, 0.329);
     color: white;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
+    /* border-radius: 20px; */
+    /* margin-bottom: 25%; */
+    padding: 15px;
     border-radius: 20px;
-    margin-bottom: 25%;
+
 }
 
 #all.disable {
@@ -249,7 +287,8 @@ opacity: 1;
 }
 
 #lists > * {
-    background-color: red;
+    /* background-color: red; */
+    background: #F0BD8B 0% 0% no-repeat padding-box;
     margin-left: 15%;
     margin-right: 15%;
     margin-top: 10px;
@@ -376,11 +415,58 @@ font-size: 46px;
 
 
 #op1:hover::before {
-    content: " 🗸";
+    content: "x";
     font-size: 20px;
     /* width: 100px; */
     /* height: 100px; */
     /* background-color: cyan; */
     color: white;
     text-align: center;
+}
+
+
+
+#headerText {
+    font-family: 'font1';
+    /* font-weight: 400; */
+}
+
+#cancelTaskFrom {
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+    align-self: flex-end;
+    border-radius: 50px;
+    text-align: center;
+}
+
+#inputs {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-between; */
+    gap: 20px;
+    align-items: center;
+    /* justify-content: center; */
+}
+
+#submitPopup {
+    align-self: center;
+    width: 50px;
+    height: 40px;
+    margin: 20px;
+}
+
+#inputs > * > input, #inputs > * >  select {
+    /* background-color: red; */
+    height: 30px;
+    width: 200px;
+}
+
+#content > div:first-child {
+    font-size: 50px;
+}
+#content {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
