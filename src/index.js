@@ -1,5 +1,3 @@
-console.log("beginning");
-
 import './styles.css';
 import headerImgg from "./images/logo.svg";
 import githubImgg from "./images/github.png";
@@ -17,13 +15,11 @@ import { projectClickListener } from './js/projectClickListener';
 import { display } from './js/displayProject';
 import { handleClick, handleFormBtnClick } from './js/handleAddListBtn';
 import { handleAllTasks} from './js/handleAllTasks';
-// import { handleAddTaskBtn } from './js/handleAddTaskBtn';
 import { handleTodayTasks } from './js/handleTodayTasks';
 import { handleSubmitTask } from './js/handleSubmitTask';
 import { handleCancelTask } from './js/handleCancelTask';
 import { showWeekTasks } from './js/showWeekTasks';
 
-// const content = document.getElementById('heaeder');
 const headerTxt = document.getElementById('headerText');
 const headerImg = document.getElementById('headerIcon');
 const footerTxt = document.getElementById('footerText');
@@ -53,11 +49,10 @@ todayImg.src = todayImgg;
 weekImg.src = weekImgg;
 
 const a = new task("Study lecture 7 in Database", '2023-04-10', 'op1');
-// const b = new task("dfffff", '2020-10-12', 666);
 
 console.log(tasks);
 
-showTasks();
+// showTasks();
 
 
 handleTodayTasks();
@@ -67,9 +62,13 @@ const d = new Project("Home");
 
 showProjects();
 
+
 const weekTasks = document.getElementById('week');
 weekTasks.addEventListener('click', showWeekTasks);
 
+handleAllTasks();
+
+projectClickListener();
 // const { format, addDays } = require('date-fns');
 
 // const today = new Date();

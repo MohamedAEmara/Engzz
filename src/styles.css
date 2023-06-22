@@ -14,11 +14,17 @@
     font-family: "font4";
     src: url("./fonts/font4.ttf");
 }
+@font-face {
+    font-family: "reg";
+    src: url(./fonts/Khula-Regular.ttf);
+}
+
 
 body, html {
     padding: 0;
     margin: 0;
     height: 100%;
+    font-family: 'reg';
 }
 #all {
     display: grid;
@@ -138,7 +144,7 @@ button {
 }
 
 
-  /* Media query for responsive adjustments */
+  /* Media query for responsive adjustments  */
   /* @media screen and (max-width: 768px) {
     .grid-container {
       grid-template-areas:
@@ -533,7 +539,7 @@ opacity: 1;
     margin-left: 3%;
     /* align-self: center; */
     margin-top: 15px;
-    height: 20px;
+    height: 40px;
 }
 
 #addProjectBtn {
