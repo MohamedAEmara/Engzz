@@ -7,11 +7,11 @@ import { removeTaskListener } from './removeTaskListener';
 const { format, addDays, isThisWeek, differenceInDays, parseISO } = require('date-fns');
 
 const allTasks = document.getElementById('inbox');
-const content = document.getElementById('content');
 
-function handleAllTasks() {
+function showAllTasks() {
     
-    allTasks.addEventListener('click', function(){
+    const content = document.getElementById('content');
+    
         console.log('called');
         // clear content section first
         while(content.hasChildNodes()) {
@@ -65,8 +65,8 @@ function handleAllTasks() {
             }
             
         }) 
-    })    
+
 }
 
 
-export {handleAllTasks};
+export {showAllTasks};

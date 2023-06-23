@@ -19,6 +19,7 @@ import { handleTodayTasks } from './js/handleTodayTasks';
 import { handleSubmitTask } from './js/handleSubmitTask';
 import { handleCancelTask } from './js/handleCancelTask';
 import { showWeekTasks } from './js/showWeekTasks';
+import { removeTask } from './js/removeTask';
 
 const headerTxt = document.getElementById('headerText');
 const headerImg = document.getElementById('headerIcon');
@@ -69,32 +70,4 @@ weekTasks.addEventListener('click', showWeekTasks);
 handleAllTasks();
 
 projectClickListener();
-// const { format, addDays } = require('date-fns');
 
-// const today = new Date();
-// const thisWeek = addDays(today, 7);
-
-// const formattedToday = format(today, 'yyyy-MM-dd');
-// console.log(formattedToday);
-// const formattedAfterWeek = format(thisWeek, 'yyyy-MM-dd');
-// console.log(formattedAfterWeek);
-
-
-// console.log(today);
-// const tomorrow = addDays(today, 1);
-// // const formattedDate = format(tomorrow, 'MMMM do, yyyy');
-
-
-// // console.log(`Tomorrow is ${formattedDate}`);
-
-
-
-// const {  } = require('date-fns');
-
-// // To get positive differecne ===> the first date is before the second date
-// const date1 = new Date('2024-06-01');
-// const date2 = new Date('2023-06-10');
-// const diffInDays = differenceInDays(date2, date1);
-// //  date2 - date1
-
-// console.log(`The difference in days between ${date1} and ${date2} is ${diffInDays}.`);

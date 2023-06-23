@@ -19,5 +19,5 @@ function projectClickListener() {
 
 export {projectClickListener};
 // projectNode.addEventListener('click', () => {
-//     console.log('clickeddddddddd');
+//     console.lxog('clickeddddddddd');
 // })
