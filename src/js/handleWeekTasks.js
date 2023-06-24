@@ -4,14 +4,16 @@ const { format, addDays, isThisWeek, differenceInDays, parseISO } = require('dat
 import { removeTaskListener1 } from "./removeTaskListener1";
 import { removeTaskListener2 } from "./removeTaskListener2";
 import { removeTaskListener3 } from "./removeTaskListener3";
+const weekTasks = document.getElementById('week');
 
+import { showWeekTasks } from "./showWeekTasks";
 
-function showWeekTasks() {
-
-    content.innerHTML = "";
-    while (content.firstChild) {
+function handleWeekTasks() {
+    weekTasks.addEventListener('click', element => {
+        content.innerHTML = "";
+        while (content.firstChild) {
         content.removeChild(content.firstChild);
-    }
+        }
 
     const weekTitle = document.createElement('div');
     weekTitle.innerHTML = "This Week";
@@ -19,6 +21,7 @@ function showWeekTasks() {
 
     tasks.forEach(element => {
         if(element.complete == false) {
+            console.log('in handle week tasks loop');
             const date = element.date;
             const lowerBound = new Date();
             const upperBound = addDays(lowerBound, 7);
@@ -79,29 +82,31 @@ function showWeekTasks() {
                 check.classList.add(element.id);
                 
                 if(element.priority == 'op1') {
+                    console.log('option1');
                     removeTaskListener1(2);
-                    // showWeekTasks();
+                    showWeekTasks();
                 }
                 if(element.priority == 'op2') {
+                    console.log('option2');
                     removeTaskListener2(2);
-                    // showWeekTasks();
+                    showWeekTasks();
                 }
                 if(element.priority == 'op3') {
+                    console.log('option3');
                     removeTaskListener3(2);
-                    // showWeekTasks();
+                    showWeekTasks();
                 }
             }
         }
-        
-
-        //   // task is in <= 7 days due date
-        //     if(element.complete == false) {
-                
-
-        //     }
-        // }
-        
-    });
+    })
+})
 }
 
-export { showWeekTasks };
+
+
+
+
+
+
+
+export { handleWeekTasks };

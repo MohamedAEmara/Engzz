@@ -20,6 +20,7 @@ import { handleSubmitTask } from './js/handleSubmitTask';
 import { handleCancelTask } from './js/handleCancelTask';
 import { showWeekTasks } from './js/showWeekTasks';
 import { removeTask } from './js/removeTask';
+import { handleWeekTasks } from './js/handleWeekTasks';
 
 const headerTxt = document.getElementById('headerText');
 const headerImg = document.getElementById('headerIcon');
@@ -49,7 +50,7 @@ inboxImg.src = inboxImgg;
 todayImg.src = todayImgg;
 weekImg.src = weekImgg;
 
-const a = new task("Study lecture 7 in Database", '2023-04-10', 'op1');
+const a = new task("Study lecture 7 in Database", '2023-06-24', 'op1');
 
 console.log(tasks);
 
@@ -64,9 +65,10 @@ const d = new Project("Home");
 showProjects();
 
 
-const weekTasks = document.getElementById('week');
-weekTasks.addEventListener('click', showWeekTasks);
-
+// const weekTasks = document.getElementById('week');
+// weekTasks.addEventListener('click', showWeekTasks());
+// showWeekTasks();
+handleWeekTasks();
 handleAllTasks();
 
 projectClickListener();

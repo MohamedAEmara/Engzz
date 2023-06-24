@@ -20,7 +20,7 @@ function showRelatedTasks(projectName) {
     content.appendChild(listTitle);
 
     tasks.forEach(element => {
-        if(element.list == projectName) {
+        if(element.list == projectName && element.complete == false) {
             // const task = document.createElement('div');
             // const title = document.createElement('div');
             // const date = document.createElement('div');

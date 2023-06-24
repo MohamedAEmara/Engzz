@@ -1,5 +1,6 @@
 import { showRelatedTasks } from './showRelatedTasks';
 // import { handleAddTaskBtn } from './handleAddTaskBtn';
+import { handleAddTaskBtn } from './handleAddTaskBtn';
 
 const content = document.getElementById('content');
 
@@ -12,7 +13,8 @@ function display(project) {
     addTaskBtn.setAttribute('id', 'addTask');
     addTaskBtn.innerHTML = "+";
     content.appendChild(addTaskBtn);
-
+    // handleAddTaskBtn();
+    handleAddTaskBtn();
 
 }
 

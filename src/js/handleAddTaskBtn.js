@@ -1,14 +1,19 @@
 // import { task } from './createTask';
 
-const btn = document.getElementById('addTask');
-const popup = document.getElementById('popup');
+import { bindAll } from "lodash";
+
 
 function handleAddTaskBtn() {
+    const btn = document.getElementById('addTask');
+    const popup = document.getElementById('popup');
+    const all = document.getElementById('all');
     console.log('in handle click add task btn');
     btn.addEventListener('click', () => {
         console.log('add task clicked');
-        popup.classlist.add('active');   
+        popup.classList.add('active');   
+        all.classList.add('disable');
     });
+    // showRelatedTasks();
 }
 
 

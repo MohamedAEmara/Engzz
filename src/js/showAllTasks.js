@@ -2,7 +2,9 @@ import { task } from "./createTask";
 import { tasks } from "./tasks";
 import { removeTask } from './removeTask';
 import { fi } from "date-fns/locale";
-import { removeTaskListener } from './removeTaskListener';
+import { removeTaskListener1 } from './removeTaskListener1';
+import { removeTaskListener2 } from './removeTaskListener2';
+import { removeTaskListener3 } from './removeTaskListener3';
 
 const { format, addDays, isThisWeek, differenceInDays, parseISO } = require('date-fns');
 
@@ -61,7 +63,19 @@ function showAllTasks() {
                 content.append(line);
                 check.classList.add(element.id);
                 
-                removeTaskListener();
+                if(element.priority == 'op1') {
+
+                    removeTaskListener1();
+                }
+                if(element.priority == 'op2') {
+                    removeTaskListener2();
+
+                }
+                if(element.priority == 'op3') {
+                    removeTaskListener3();
+
+                }
+
             }
             
         }) 

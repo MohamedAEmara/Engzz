@@ -1,4 +1,5 @@
 import { display } from "./displayProject";
+// import { handleAddTaskBtn } from "./handleAddTaskBtn";
 import { showProjects } from "./showProjects";
 import { showRelatedTasks } from "./showRelatedTasks";
 
@@ -12,6 +13,7 @@ function projectClickListener() {
             // showRelatedTasks(this.textContent);
             // showProjects(this);
             display(this);
+            
         });
     }
 

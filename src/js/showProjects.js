@@ -2,12 +2,13 @@ import { projects } from "./projects";
 
 const lists = document.getElementById('lists');
 
+import { handleAddTaskBtn } from './handleAddTaskBtn';
 
-
-export function showProjects() {
+function showProjects() {
     while(lists.hasChildNodes()) {
         lists.removeChild(lists.firstChild);
     }    
+    // handleAddTaskBtn();
     projects.forEach(function(element) {
         console.log("showProjects called !!!!");
         const project = document.createElement('div');
@@ -16,3 +17,6 @@ export function showProjects() {
         lists.appendChild(project);
     }) 
 }
+
+
+export { showProjects };

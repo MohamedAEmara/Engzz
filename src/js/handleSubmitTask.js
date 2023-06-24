@@ -1,5 +1,6 @@
 // handleSubmitTask.js
 import { task } from "./createTask";
+import { showRelatedTasks } from "./showRelatedTasks";
 
 
 function handleSubmitTask() {

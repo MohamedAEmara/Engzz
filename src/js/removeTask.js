@@ -1,9 +1,10 @@
 import { handleAllTasks } from './handleAllTasks';
 import { showAllTasks } from './showAllTasks';
 import { tasks } from './tasks';
+import { showWeekTasks } from './showWeekTasks';
+import { showTodayTasks } from './showTodayTasks';
 
-
-function removeTask(element) {
+function removeTask(element, origin) {
     // Get a reference to the element
     // const myDiv = document.getElementById("myDiv");
 
@@ -18,11 +19,25 @@ function removeTask(element) {
     // console.log('TEST');
     // Log the result
     console.log(secondClass); // Output: "red-border"
+    // console.log('origin = ' + origin);
     tasks.forEach(task => {
         if(task.id == secondClass)
-            task.complete = true;
+        task.complete = true;
     });
-    showAllTasks();
+    console.log('origin = ' + origin);
+    if(origin == 1) {
+        showTodayTasks();
+        console.log('today');
+    }
+    else if(origin == 2) {
+        showWeekTasks();
+        console.log('week');
+    }
+    else if(origin == 3) {
+        showAllTasks();
+        console.log('all');
+    }
+    // showAllTasks();
     console.log('after handleAllTasks');
 }
 
