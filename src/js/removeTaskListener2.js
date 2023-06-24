@@ -1,7 +1,8 @@
 import { handleAllTasks } from "./handleAllTasks";
 import { removeTask } from "./removeTask";
 import { showAllTasks } from "./showAllTasks";
-
+import { showWeekTasks } from "./showWeekTasks";
+import { showTodayTasks } from "./showTodayTasks";
 function removeTaskListener2(origin) {
     
     const del2 = document.getElementById('op2');
