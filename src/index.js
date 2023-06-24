@@ -51,7 +51,8 @@ todayImg.src = todayImgg;
 weekImg.src = weekImgg;
 
 const a = new task("Study lecture 7 in Database", '2023-06-24', 'op1');
-
+const b = new task('Recite Juz of Quran', '2023-06-24', 'op3');
+    
 console.log(tasks);
 
 // showTasks();

@@ -10,7 +10,8 @@ function removeTaskListener3(origin) {
     
     del3.addEventListener('click', function() {
         console.log(this);
-        removeTask(this);
+        console.log('origin: ' + origin);
+        removeTask(this, origin);
         if(origin == 1)
             showTodayTasks();
         else if(origin == 2)

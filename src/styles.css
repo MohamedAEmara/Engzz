@@ -579,3 +579,27 @@ opacity: 1;
     padding-top: 5px;
     padding-right: 5px;
 }
+
+/* label {
+    margin-left: 50px;
+} */
+.taskName, .dueDate, #priority {
+    display: flex;
+    /* flex-direction: ; */
+    /* justify-self: flex-start; */
+    justify-content: center;
+    gap: 50px;
+    /* gap: 20px; */
+}
+
+select {
+    margin-left: 5px;
+}
+
+#cancelTaskFrom {
+    background-color: red;
+}
+
+#addProjectInput {
+    color: white;
+}

@@ -74,19 +74,19 @@ function handleTodayTasks() {
                     check.classList.add(element.id);
                     
                     if(element.priority == 'op1') {
-                        removeTaskListener1();
+                        removeTaskListener1(1);
                         // handleTodayTasks();
-                        showTodayTasks(1);
+                        showTodayTasks();
                     }
                     if(element.priority == 'op2') {
-                        removeTaskListener2();
+                        removeTaskListener2(1);
                         // handleTodayTasks();
-                        showTodayTasks(1);
+                        showTodayTasks();
                     }
                     if(element.priority == 'op3') {
-                        removeTaskListener3();
+                        removeTaskListener3(1);
                         // handleTodayTasks();
-                        showTodayTasks(1);
+                        showTodayTasks();
                     }
     
                 }

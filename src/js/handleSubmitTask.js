@@ -1,7 +1,8 @@
 // handleSubmitTask.js
 import { task } from "./createTask";
+import { display } from "./displayProject";
 import { showRelatedTasks } from "./showRelatedTasks";
-
+import { display2 } from "./display2";
 
 function handleSubmitTask() {
     const popup = document.getElementById('popup');
@@ -37,6 +38,9 @@ function handleSubmitTask() {
             // 2- Remove disable class from all
             popup.classList.remove('active');
             all.classList.remove('disable');
+            console.log(project + "  project");
+            display2(project);
+
         }
 });
 }

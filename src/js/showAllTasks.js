@@ -65,14 +65,14 @@ function showAllTasks() {
                 
                 if(element.priority == 'op1') {
 
-                    removeTaskListener1();
+                    removeTaskListener1(3);
                 }
                 if(element.priority == 'op2') {
-                    removeTaskListener2();
+                    removeTaskListener2(3);
 
                 }
                 if(element.priority == 'op3') {
-                    removeTaskListener3();
+                    removeTaskListener3(3);
 
                 }
 

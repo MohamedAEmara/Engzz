@@ -1,7 +1,7 @@
 // import { task } from './createTask';
-
+import { display } from './displayProject';
 import { bindAll } from "lodash";
-
+import { display2 } from './display2';
 
 function handleAddTaskBtn() {
     const btn = document.getElementById('addTask');
@@ -12,6 +12,8 @@ function handleAddTaskBtn() {
         console.log('add task clicked');
         popup.classList.add('active');   
         all.classList.add('disable');
+        // display2(project);
+
     });
     // showRelatedTasks();
 }
