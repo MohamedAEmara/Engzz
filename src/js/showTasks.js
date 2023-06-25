@@ -49,7 +49,7 @@ function showTasks() {
             content.append(line);
             check.classList.add(element.id);
             
-            removeTaskListener();
+            // removeTaskListener();
         }
         
     })

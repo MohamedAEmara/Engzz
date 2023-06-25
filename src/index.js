@@ -74,3 +74,7 @@ handleAllTasks();
 
 projectClickListener();
 
+const projectListener = document.getElementById('project');
+projectListener.addEventListener('click', (event) => {
+    
+})

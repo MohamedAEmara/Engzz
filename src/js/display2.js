@@ -5,6 +5,10 @@ import { handleAddTaskBtn } from './handleAddTaskBtn';
 const content = document.getElementById('content');
 
 function display2(project) {
+    while (content.hasChildNodes()) {
+        content.removeChild(content.lastChild);
+    }
+    console.log(project);
     content.innerHTML = project;
     showRelatedTasks(project);
 

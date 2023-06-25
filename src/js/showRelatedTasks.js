@@ -4,7 +4,9 @@
     In this file we will search for all the sections to see which of them 
     is Related to this list
 */
-
+import { removeTaskListener1 } from './removeTaskListener1';
+import { removeTaskListener2 } from './removeTaskListener2';
+import { removeTaskListener3 } from './removeTaskListener3';
 import { tasks } from './tasks';
 const content = document.getElementById('content');
 const { format, addDays, isThisWeek, differenceInDays, parseISO } = require('date-fns');
@@ -21,34 +23,7 @@ function showRelatedTasks(projectName) {
 
     tasks.forEach(element => {
         if(element.list == projectName && element.complete == false) {
-            // const task = document.createElement('div');
-            // const title = document.createElement('div');
-            // const date = document.createElement('div');
-        
             
-            // content.appendChild(task);
-            // task.appendChild(title);
-            // task.appendChild(date);
-        
-            // title.innerHTML = element.title;
-            // date.innerHTML = element.date;
-
-            // content.appendChild(task);
-            // const line = document.createElement('div');
-            // const name = document.createElement('div');
-            // const date = document.createElement('div');
-            // const level = document.createElement('div');
-            // const check = document.createElement('button');
-            // line.classList.add('task');
-            // name.innerHTML = element.title;
-            // date.innerHTML = element.date;
-            // level.innerHTML = element.priority;
-            // check.innerHTML = " ";
-            // line.appendChild(name);
-            // line.appendChild(date);
-            // line.appendChild(level);
-            // line.appendChild(check);
-            // content.appendChild(line);
             const line = document.createElement('div');
             const check = document.createElement('div');
             check.setAttribute('id', 'check');
@@ -93,7 +68,21 @@ function showRelatedTasks(projectName) {
             line.appendChild(left);
             line.appendChild(right);
             content.append(line);
-            check.classList.add(level);
+            check.classList.add(element.id);
+
+            if(element.priority == 'op1') {
+                removeTaskListener1(projectName);
+            }
+            if(element.priority == 'op2') {
+                console.log(projectName + ' projectName');
+                removeTaskListener2(projectName);
+
+            }
+            if(element.priority == 'op3') {
+                removeTaskListener3(projectName);
+
+            }
+
         }
     });
     console.log('from showRelatedTasks');

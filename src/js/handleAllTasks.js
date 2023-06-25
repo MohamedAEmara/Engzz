@@ -68,6 +68,7 @@ function handleAllTasks() {
                     removeTaskListener2(3);
                 else if(element.priority == 'op3')
                     removeTaskListener3(3);
+            
             }
             
         }) 

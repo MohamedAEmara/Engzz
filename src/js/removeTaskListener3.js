@@ -3,6 +3,7 @@ import { removeTask } from "./removeTask";
 import { showAllTasks } from "./showAllTasks";
 import { showWeekTasks } from "./showWeekTasks";
 import { showTodayTasks } from "./showTodayTasks";
+import { display2 } from "./display2";
 
 function removeTaskListener3(origin) {
 
@@ -18,6 +19,8 @@ function removeTaskListener3(origin) {
             showWeekTasks();
         else if(origin == 3)
             showAllTasks();
+        else 
+            display2(origin);
     });    
 }
 

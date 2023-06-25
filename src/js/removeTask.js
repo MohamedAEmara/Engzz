@@ -3,6 +3,9 @@ import { showAllTasks } from './showAllTasks';
 import { tasks } from './tasks';
 import { showWeekTasks } from './showWeekTasks';
 import { showTodayTasks } from './showTodayTasks';
+import { display } from './displayProject';
+import { Project } from './createProject';
+import { display2 } from './display2';
 
 function removeTask(element, origin) {
     // Get a reference to the element
@@ -21,8 +24,11 @@ function removeTask(element, origin) {
     console.log(secondClass); // Output: "red-border"
     // console.log('origin = ' + origin);
     tasks.forEach(task => {
-        if(task.id == secondClass)
-        task.complete = true;
+        if(task.id == secondClass) {
+            task.complete = true;
+            console.log('marked task is ' + task.title);
+        }
+        console.log('there is a task named ' + task.title);
     });
     console.log('origin = ' + origin);
     if(origin == 1) {
@@ -36,6 +42,11 @@ function removeTask(element, origin) {
     else if(origin == 3) {
         showAllTasks();
         console.log('all');
+    }
+    else {
+        console.log(origin + ' else ');
+        // console.log('else');
+        display2(origin);
     }
     // showAllTasks();
     console.log('after handleAllTasks');

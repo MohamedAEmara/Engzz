@@ -603,3 +603,25 @@ select {
 #addProjectInput {
     color: white;
 }
+
+#footer {
+    position: fixed;
+    bottom: 0;
+}
+
+.title {
+    font-size: 25px;
+    margin-left: 10px;
+}
+
+#project {
+    font-size: 25px;
+}
+
+#headerText {
+    font-size: 60px;
+}
+
+#headerIcon {
+    width: 50px;
+}

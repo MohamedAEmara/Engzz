@@ -13,6 +13,7 @@ function showProjects() {
         console.log("showProjects called !!!!");
         const project = document.createElement('div');
         project.classList.add('project');
+        project.setAttribute('id', 'project');
         project.innerHTML = element.name;
         lists.appendChild(project);
     }) 
