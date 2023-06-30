@@ -39,26 +39,20 @@ body, html {
   
   .header {
     grid-area: header;
-    /* Styles for the header */
   }
   
   .sidebar {
     grid-area: sidebar;
-    /* Styles for the sidebar */
-    /* background-color: orange; */
     display: flex;
     flex-direction: column;
 }
   
   .content {
     grid-area: content;
-    /* Styles for the main content */
-    /* background-color: cadetblue; */
 }
   
   .footer {
     grid-area: footer;
-    /* Styles for the footer */
     background-color: gray;
 }
 
@@ -143,20 +137,7 @@ button {
     flex-direction: column;
 }
 
-
-  /* Media query for responsive adjustments  */
-  /* @media screen and (max-width: 768px) {
-    .grid-container {
-      grid-template-areas:
-        "header"
-        "content"
-        "sidebar"
-        "footer";
-      grid-template-columns: 1fr; 
-      grid-template-rows: auto 1fr auto auto; 
-    }
-  }
-   */
+  
 
 .content {
     position: relative;
@@ -167,9 +148,6 @@ button {
 #addTask {
     /* background-color: red; */
     background: #F0BD8B 0% 0% no-repeat padding-box;
-
-    /* margin-top: min(200%, ; */
-    /* margin-bottom: 10px; */
     position: absolute;
     bottom: 15px;
     right: 15px;
@@ -203,22 +181,11 @@ form#popup {
     top: 20%;
     right: 20%;
     left: 20%;
-    
-    /* bottom: 10%; */
-    /* margin-top: 20%; */
-    /* margin-bottom: 20%; */
-    /* margin-right: 25%; */
-    /* margin-left: 25%; */
-    /* left: 0;
-    right: 0;
-    bottom: 0; */
     background-color: rgba(0, 0, 0, 0.329);
     color: white;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    /* border-radius: 20px; */
-    /* margin-bottom: 25%; */
     padding: 15px;
     border-radius: 20px;
 
@@ -228,24 +195,13 @@ form#popup {
     filter: blur(10px);
 }
 
-/* .sidebar, .header {
-    background-color: #F0BD8B;
-} */
-
-
-
-
 #all{
     background: transparent linear-gradient(180deg, #F0BD8B 0%, #132C2E 100%) 0% 0% no-repeat padding-box;
 }
 
-#all {
-    /* background-color: #F0BD8B; */
-}
 
 #content {
     background-color: #132C2E;
-    /* border-radius: 100px 0px 0px 0px; */
     padding: 50px;
     color: white;
 }
@@ -269,20 +225,12 @@ form#popup {
 #today:hover, #week:hover, #inbox:hover {
     color: #F9F8F6;
     opacity: 1;
-    background: #AD876F 0% 0% no-repeat padding-box;
-    /* background-color: #AD876F; */
     border-radius: 8px;
-/* border-radius: 8px; */
-
-/* Layout Properties */
-top: 176px;
-left: 38px;
-/* width: 230px; */
-/* height: 45px; */
-/* UI Properties */
-background: #AD876F 0% 0% no-repeat padding-box;
-border-radius: 8px;
-opacity: 1;
+    top: 176px;
+    left: 38px;
+    background: #AD876F 0% 0% no-repeat padding-box;
+    border-radius: 8px;
+    opacity: 1;
 }
 
 
@@ -298,34 +246,21 @@ opacity: 1;
 
 
 #inboxIcon {
-    /* Layout Properties */
-/* top: 234px; */
-left: 48px;
-width: 30px;
-/* height: 30px; */
-/* UI Properties */
-/* background: #6C5255 0% 0% no-repeat padding-box; */
-opacity: 1;
+    left: 48px;
+    width: 30px;
+    opacity: 1;
 }
 
 div#inbox {
-    /* top: 231px; */
     left: 48px;
-    /* width: 150px; */
-    /* height: 33px; */
-    /* UI Properties */
     opacity: 1;
 }
 
 
 #weekIcon {
-/* Layout Properties */
 top: 184px;
 left: 48px;
 width: 30px;
-/* height: 30px; */
-/* UI Properties */
-/* background: #F9F8F6 0% 0% no-repeat padding-box; */
 opacity: 1;
 }
 
@@ -335,12 +270,7 @@ opacity: 1;
 }
 
 .top > * {
-    /* padding-top: 10px; */
-    /* padding-bottom: 10px; */
-    /* background-color: red;   */
     height: 54px;
-    /* margin-top: 5px; */
-    /* margin-bottom: 5px; */
     padding-left: 5px;
     padding-right: 5px;
 }
@@ -348,21 +278,20 @@ opacity: 1;
 div.logo {
 
     top: 26px;
-left: 95px;
-width: 204px;
-height: 56px;
-text-align: left;
-font: normal normal 600 40px/60px Poppins-SemiBold;
-letter-spacing: 0.17px;
-color: #6C5255;
-opacity: 1;
-font-size: 46px;
+    left: 95px;
+    width: 204px;
+    height: 56px;
+    text-align: left;
+    font: normal normal 600 40px/60px Poppins-SemiBold;
+    letter-spacing: 0.17px;
+    color: #6C5255;
+    opacity: 1;
+    font-size: 46px;
 }
 
 .logo {
     position: inherit;
     margin-left: 15px;
-    /* : 95px; */
 }
 
 #headerIcon {
@@ -381,7 +310,6 @@ font-size: 46px;
 
 .task {
     display: flex;
-    /* justify-content: flex-start; */
     justify-content: space-between;
     gap: 60px;
 }
@@ -396,11 +324,6 @@ font-size: 46px;
 }
 
 
-/* #content > * {
-    display: flex;
-    justify-content: space-around;
-} */
-
 #op1 {
     border: 2px solid red;
 } 
@@ -411,11 +334,6 @@ font-size: 46px;
     border: 2px solid greenyellow;
 }
 
-/* 
-#op1:hover, #op2:hover, #op3:hover {
-    background-color: white;
-    
-} */
 
 #op1:hover {
     background-color: red;
@@ -436,7 +354,6 @@ font-size: 46px;
 
 #headerText {
     font-family: 'font1';
-    /* font-weight: 400; */
 }
 
 #cancelTaskFrom {
@@ -451,10 +368,8 @@ font-size: 46px;
 #inputs {
     display: flex;
     flex-direction: column;
-    /* justify-content: space-between; */
     gap: 20px;
     align-items: center;
-    /* justify-content: center; */
 }
 
 #submitPopup {
@@ -462,10 +377,10 @@ font-size: 46px;
     width: 50px;
     height: 40px;
     margin: 20px;
+    background-color: #F0BD8B;
 }
 
 #inputs > * > input, #inputs > * >  select {
-    /* background-color: red; */
     height: 30px;
     width: 200px;
 }
@@ -484,45 +399,19 @@ font-size: 46px;
     cursor: pointer;
 }
 
-/* #today:focus, #week:hover, #inbox:hover {
-    background-color: #132C2E;
-} */
-
-
 
 .project:hover {
     color: #F9F8F6;
     opacity: 1;
-    background: #AD876F 0% 0% no-repeat padding-box;
-    /* background-color: #AD876F; */
-    /* border-radius: 8px; */
-/* border-radius: 8px; */
+    top: 176px;
+    left: 38px;
 
-/* Layout Properties */
-top: 176px;
-left: 38px;
-/* width: 230px; */
-/* height: 45px; */
-/* UI Properties */
-background: #AD876F 0% 0% no-repeat padding-box;
-/* border-radius: 8px; */
-opacity: 1;
+    background: #AD876F 0% 0% no-repeat padding-box;
+    opacity: 1;
 }
 
 
 
-/* #lists > * {
-    
-    background: #F0BD8B 0% 0% no-repeat padding-box;
-    margin-left: 15%;
-    margin-right: 15%;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    font-size: 20px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-
-} */
 
 .project {
     padding: 10px;
@@ -537,7 +426,6 @@ opacity: 1;
     background-color: rgb(0, 0, 0, 0.5);
     width: 90%;
     margin-left: 3%;
-    /* align-self: center; */
     margin-top: 15px;
     height: 40px;
 }
@@ -545,24 +433,15 @@ opacity: 1;
 #addProjectBtn {
     background: #F0BD8B 0% 0% no-repeat padding-box;
 
-    /* margin-top: min(200%, ; */
-    /* margin-bottom: 10px; */
-    /* position: absolute; */
-    /* bottom: 15px; */
-    /* right: 15px; */
     border-radius: 15px;
-    /* width: 60px; */
-    /* height: 60px; */
-    /* color: white; */
+
     font-size: 25px;
     text-align: center;
-    /* font-weight: 900; */
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 10px;
     width: 50%;
-    /* margin-left: 43px; */
     margin-top: 10px;
 }
 
@@ -574,22 +453,16 @@ opacity: 1;
 }
 
 .task {
-    /* border: 2px solid black; */
     font-size: 20px;
     padding-top: 5px;
     padding-right: 5px;
 }
 
-/* label {
-    margin-left: 50px;
-} */
+
 .taskName, .dueDate, #priority {
     display: flex;
-    /* flex-direction: ; */
-    /* justify-self: flex-start; */
     justify-content: center;
     gap: 50px;
-    /* gap: 20px; */
 }
 
 select {
@@ -597,7 +470,7 @@ select {
 }
 
 #cancelTaskFrom {
-    background-color: red;
+    background-color:#F0BD8B;
 }
 
 #addProjectInput {
@@ -620,8 +493,40 @@ select {
 
 #headerText {
     font-size: 60px;
+    /* text-shadow: 4px 4px 10px rgb(0, 0, 0, 0.6); */
 }
 
 #headerIcon {
     width: 50px;
+    filter: drop-shadow(4px 4px 2px rgb(0 0 0 / 0.4));
+}
+
+#option1 {
+    background-color: red;
+    padding: 4px;
+    text-align: center;
+}
+
+#option2 {
+    background-color: yellow;
+    padding: 4px;
+    text-align: center;
+}
+#option3 {
+    background-color: greenyellow;
+    padding: 4px;
+    text-align: center;
+}
+
+
+#option1:hover {
+    background-color: red;
+}
+
+#option2:hover {
+    background-color: yellow;
+}
+
+#option3:hover {
+    background-color: greenyellow;
 }

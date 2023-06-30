@@ -1,14 +1,10 @@
-import { task } from "./createTask";
 import { tasks } from "./tasks";
-import { removeTask } from './removeTask';
-import { fi } from "date-fns/locale";
 import { removeTaskListener1 } from './removeTaskListener1';
 import { removeTaskListener2 } from './removeTaskListener2';
 import { removeTaskListener3 } from './removeTaskListener3';
 
 const { format, addDays, isThisWeek, differenceInDays, parseISO } = require('date-fns');
 
-const allTasks = document.getElementById('inbox');
 
 function showAllTasks() {
     

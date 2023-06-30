@@ -30,7 +30,6 @@ function showRelatedTasks(projectName) {
             check.classList.add('check');
             const date = document.createElement('div');
             const name = document.createElement('div');
-            // const level = document.createElement('div');
             
             const left = document.createElement('div');
             const right = document.createElement('div');
@@ -38,10 +37,7 @@ function showRelatedTasks(projectName) {
 
             left.classList.add('left');
             right.classList.add('right');
-            // left.appendChild(check);
-            // line.appendChild(title);
 
-            // const check = document.createElement('button');
             line.classList.add('task');
 
             name.innerHTML = element.title;

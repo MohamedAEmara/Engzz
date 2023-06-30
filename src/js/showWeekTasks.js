@@ -1,5 +1,5 @@
 import { tasks } from "./tasks";
-const { format, addDays, isThisWeek, differenceInDays, parseISO } = require('date-fns');
+const { format, addDays, differenceInDays, parseISO } = require('date-fns');
 
 import { removeTaskListener1 } from "./removeTaskListener1";
 import { removeTaskListener2 } from "./removeTaskListener2";
