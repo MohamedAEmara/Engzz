@@ -15,6 +15,8 @@ class task {
     }
     createTask() {
         tasks.push(this);
+        const strTasks = JSON.stringify(tasks);
+        localStorage.setItem("tasks", strTasks);
     }
 }
 

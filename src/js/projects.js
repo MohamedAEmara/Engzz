@@ -1,7 +1,7 @@
 // project.js
 
 
-const projects = [];
+let projects = [];
 
 
 export {projects};

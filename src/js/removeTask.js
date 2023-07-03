@@ -31,6 +31,8 @@ function removeTask(element, origin) {
         console.log('there is a task named ' + task.title);
     });
     console.log('origin = ' + origin);
+    let strTasks = JSON.stringify(tasks);
+    localStorage.setItem("tasks", strTasks);
     if(origin == 1) {
         showTodayTasks();
         console.log('today');

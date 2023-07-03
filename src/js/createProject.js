@@ -10,6 +10,8 @@ class Project {
     }
     createProject() {
         projects.push(this);
+        let strProjects = JSON.stringify(projects);
+        localStorage.setItem("projects", strProjects);
     }
 }
 

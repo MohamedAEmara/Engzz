@@ -16,6 +16,8 @@ import { handleSubmitTask } from './js/handleSubmitTask';
 import { handleCancelTask } from './js/handleCancelTask';
 
 import { handleWeekTasks } from './js/handleWeekTasks';
+import { retrieveProjects } from './js/retrieveProjects';
+import { retrieveTasks } from './js/retrieveTasks';
 
 const headerImg = document.getElementById('headerIcon');
 const footerImg = document.getElementById('footerIcon');
@@ -37,8 +39,22 @@ inboxImg.src = inboxImgg;
 todayImg.src = todayImgg;
 weekImg.src = weekImgg;
 
-const a = new task("Study lecture 7 in Database", '2023-06-24', 'op3');
-const b = new task('Recite Juz of Quran', '2023-06-24', 'op2');
+let retP = retrieveProjects();
+let retT = retrieveTasks();
+
+
+if(retP == 0) {
+    const c = new Project("Courses");
+    const d = new Project("Spiritual");
+} 
+
+
+
+if(retT == 0) {
+    const a = new task("Study lecture 7 in Database", '2023-06-24', 'op3', 'Courses');
+    const b = new task('Recite Juz of Quran', '2023-06-24', 'op2', 'Spiritual');
+}
+
     
 console.log(tasks);
 
@@ -47,8 +63,7 @@ console.log(tasks);
 
 handleTodayTasks();
 
-const c = new Project("Courses");
-const d = new Project("Home");
+
 
 showProjects();
 
@@ -61,7 +76,7 @@ handleAllTasks();
 
 projectClickListener();
 
-const projectListener = document.getElementById('project');
-projectListener.addEventListener('click', (event) => {
+// const projectListener = document.getElementById('project');
+// projectListener.addEventListener('click', (event) => {
     
-})
+// })
