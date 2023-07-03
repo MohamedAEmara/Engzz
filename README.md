@@ -15,6 +15,7 @@ Every task has "due date", "priority" features.
 You can Add Lists and in every list you are able to add tasks.
 
 
-#### Demo Video:
+#### Engzz Demo:
 
-https://github.com/MohamedAEmara/Engzz/assets/62681515/89fc3c6e-f699-4e42-b267-05e4c46d1ddf
+
+https://github.com/MohamedAEmara/Engzz/assets/62681515/37152cb0-9712-45b7-9382-0396df0fba3a
